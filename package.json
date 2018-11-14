@@ -5,16 +5,18 @@
     "description": "AutoDevBots worker nodes",
     "author": "Garland Kan <garlandk@gmail.com>",
     "dependencies": {
-        "express": "3.4.8",
+        "async": ">=2.6.1",
+        "aws-sdk": "2.0.0-rc9",
+        "config": "0.4.35",
+        "express": ">=4.16.4",
+        "express-busboy": ">=7.0.0",
+        "frisby": "2.1.0",
+        "github": "0.1.14",
+        "jasmine-node": "^1.16.2",
+        "querystring": ">=0.2.0",
         "redis": "0.10.0",
         "shelljs": "0.2.6",
-        "frisby": "0.7.8",
         "xml2js": "0.4.1",
-        "config": "0.4.35",
-        "yaml": "0.2.3",
-        "aws-sdk": "2.0.0-rc9",
-        "github": "0.1.14",
-        "async": ">=0.7.0",
-        "querystring": ">=0.2.0"
+        "yaml": ">=1.0.1"
     }
 }

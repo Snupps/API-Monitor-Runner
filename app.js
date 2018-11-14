@@ -11,7 +11,8 @@
 
 var conf = require('./config.js');
 var http    = require('http'),
-    express = require('express');
+    express = require('express'),
+    bb = require('express-busboy');
 var shell = require('shelljs');
 var async = require('async');
 var executeMonitor = require('./lib/ExecuteMonitor.js');
@@ -28,7 +29,7 @@ var PORT = process.env.SERVER_PORT || conf.SERVER_PORT,
     monitor_interval = process.env.MONITOR_INTERVAL || conf.MONITOR_INTERVAL;
 
 var app = express();
-app.use(express.bodyParser());
+bb.extend(app);
 
 /**
  * Interval to hit the test interface to kick off a test.
