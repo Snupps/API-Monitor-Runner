@@ -19,10 +19,11 @@ exports.TRIGGER_ON_ERROR = true;
 exports.TRIGGER_ON_FAILURES = true;
 
 // Trigger action
-exports.TRIGGER_EMAIL = true;
-exports.TRIGGER_PAGER_DUTY = true;
-exports.TRIGGER_WEBHOOK = true;
-exports.TRIGGER_HIPCHAT = true;
+exports.TRIGGER_EMAIL = false;
+exports.TRIGGER_PAGER_DUTY = false;
+exports.TRIGGER_WEBHOOK = false;
+exports.TRIGGER_HIPCHAT = false;
+exports.TRIGGER_OPSGENIE = false;
 
 // Error Thresholds
 exports.THRESHOLD_ERRORS = 1;
@@ -73,3 +74,16 @@ exports.ACTION_HIPCHAT_AUTHTOKEN = 'abc123';
 exports.ACTION_HIPCHAT_MSG_COLOR = 'yellow';
 exports.ACTION_HIPCHAT_MSG_NOTIFY = 'false';
 exports.ACTION_HIPCHAT_MSG_FORMAT = 'html';
+
+
+// Action config - OpsGenie
+//
+// documentation: https://www.opsgenie.com/docs/alert-api
+//
+exports.ACTION_OPSGENIE_PROTOCOL = 'https';
+exports.ACTION_OPSGENIE_HOST = 'api.opsgenie.com';
+exports.ACTION_OPSGENIE_METHOD = 'POST';
+exports.ACTION_OPSGENIE_ENDPOINT = '/v2/alerts';
+exports.ACTION_OPSGENIE_API_KEY = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx';
+exports.ACTION_OPSGENIE_MESSAGE = 'API Monitoring Failure';
+exports.ACTION_OPSGENIE_TEAM = 'Operations';
