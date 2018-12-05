@@ -154,13 +154,8 @@ app.post('/executeMonitorFrisby', function (req, res) {
         ],
         // optional callback
         function(err, results){
-            console.log('Final test output:');
-            console.log(results[3].body);
-
-            // Handle the frisby.js test results
-            resultHandler.setXmlResults(results[3].body);
-            resultHandler.parse();
-            resultHandler.triggers();
+            console.log('Test runner results:');
+            console.log(results);
     });
 });
 
